@@ -16,5 +16,29 @@ namespace OOprojekt
         {
             InitializeComponent();
         }
+
+        //Gør at jeg fremover kan referere til classen Race med navnet raceTemplate
+        Race raceTemplate;
+
+        //Når man trykker på knappen create...
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            //Laver et object af classen Race
+            raceTemplate = new Race();
+
+            //Sender brugernavnet, brugeren har valgt, til Race classen
+            raceTemplate.Username = txtUsername.Text;
+            MessageBox.Show(raceTemplate.Username);
+
+            //Sender racen, brugeren har valgt, til Race classen 
+            raceTemplate.RaceNumberChosen = lstRace.SelectedIndex;
+            MessageBox.Show(raceTemplate.RaceChosen);
+
+            //Sender kønnet, brugeren har valgt til classen
+            raceTemplate.GenderNumberChosen = lstGender.SelectedIndex;
+            MessageBox.Show(raceTemplate.GenderChosen);
+
+            
+        }
     }
 }
