@@ -18,7 +18,9 @@ namespace OOprojekt
         }
 
         //Gør at jeg fremover kan referere til classen Race med navnet raceTemplate
-        Race raceTemplate;
+        public Race raceTemplate;
+
+        GameForm gameForm;
 
         //Når man trykker på knappen create...
         private void btnCreate_Click(object sender, EventArgs e)
@@ -38,7 +40,12 @@ namespace OOprojekt
             raceTemplate.GenderNumberChosen = lstGender.SelectedIndex;
             MessageBox.Show(raceTemplate.GenderChosen);
 
-            
+            gameForm.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            gameForm = new GameForm(this);
         }
     }
 }

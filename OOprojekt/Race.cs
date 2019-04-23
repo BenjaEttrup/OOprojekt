@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOprojekt
 {
-    class Race
+    public class Race
     {
 
         //====================
