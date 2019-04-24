@@ -14,7 +14,7 @@ namespace OOprojekt
         //====================
         
         //Array til at opbevare de racer brugeren kan vælge mellem
-        private string[] racer;
+        public string[] racer;
         //Indeholder den valgte race
         private string currentRace;
 

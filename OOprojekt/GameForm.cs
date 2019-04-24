@@ -12,11 +12,14 @@ namespace OOprojekt
 {
     public partial class GameForm : Form
     {
+        //Laver en variable af typen Form1
         Form1 form1;
 
         public GameForm(Form1 refForm1)//Laver en reference til den første form
         {
             InitializeComponent();
+
+            //Gemmer referencen til form1 i en variable
             form1 = refForm1;
         }
 
@@ -26,8 +29,10 @@ namespace OOprojekt
 
         }
 
+        //Når formen loader...
         private void GameForm_Load(object sender, EventArgs e)
         {
+            //Gemmer form1 så brugeren ikke kan se den
             form1.Hide();
         }
     }
