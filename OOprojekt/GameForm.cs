@@ -15,6 +15,9 @@ namespace OOprojekt
         //Laver en variable af typen Form1
         Form1 form1;
 
+        //Laver en variable af typen Race
+        Race race;
+
         public GameForm(Form1 refForm1)//Laver en reference til den første form
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace OOprojekt
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(form1.raceTemplate.Username);
+            MessageBox.Show(race.Username);
 
         }
 
@@ -34,6 +37,10 @@ namespace OOprojekt
         {
             //Gemmer form1 så brugeren ikke kan se den
             form1.Hide();
+
+            //Kopirer race vriablen fra form1 over i race variablen i denne form
+            //Så jeg ikke skal referer over i den første for hvis jeg skal bruge race variablen
+            race = form1.race;
         }
     }
 }

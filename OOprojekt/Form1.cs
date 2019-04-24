@@ -17,8 +17,9 @@ namespace OOprojekt
             InitializeComponent();
         }
 
-        //Gør at jeg fremover kan referere til classen Race med navnet raceTemplate
-        public Race raceTemplate;
+        //Laver en variable af typen Race
+        //Den er public fordi den bliver brugt i den anden form
+        public Race race;
 
         //Laver en variable af typen gameForm
         GameForm gameForm;
@@ -29,11 +30,11 @@ namespace OOprojekt
             //Laver et objekt og gemmer det i gameForm variablen
             gameForm = new GameForm(this);
 
-            //Laver et object af classen Race
-            raceTemplate = new Race();
+            //Laver et object af classen Race og gemmer det i variablen race
+            race = new Race();
 
             //For hver string i arrayet racer i objektet raceTemplate
-            foreach (String race in raceTemplate.racer)
+            foreach (String race in race.racer)
             {
                 //Tilføj et element til listboxen
                 lstRace.Items.Add(race);
@@ -47,8 +48,8 @@ namespace OOprojekt
             if (txtUsername.Text != "")
             {
                 //Sender brugernavnet, brugeren har valgt, til Race classen
-                raceTemplate.Username = txtUsername.Text;
-                MessageBox.Show(raceTemplate.Username);
+                race.Username = txtUsername.Text;
+                MessageBox.Show(race.Username);
             }
             else//Ellers
             {
@@ -60,8 +61,8 @@ namespace OOprojekt
             try
             {
                 //Sender racen, brugeren har valgt, til Race classen 
-                raceTemplate.RaceNumberChosen = lstRace.SelectedIndex;
-                MessageBox.Show(raceTemplate.RaceChosen);
+                race.RaceNumberChosen = lstRace.SelectedIndex;
+                MessageBox.Show(race.RaceChosen);
             }
             //Hvis det ikke virker...
             catch 
@@ -74,8 +75,8 @@ namespace OOprojekt
             try
             {
                 //Sender kønnet, brugeren har valgt til classen
-                raceTemplate.GenderNumberChosen = lstGender.SelectedIndex;
-                MessageBox.Show(raceTemplate.GenderChosen);
+                race.GenderNumberChosen = lstGender.SelectedIndex;
+                MessageBox.Show(race.GenderChosen);
             }
             //Hvis ikke det virker...
             catch
@@ -85,7 +86,7 @@ namespace OOprojekt
             }
 
             //Hvis alle felterne på formen er blevet fyldt ud...
-            if (raceTemplate.Username != null && raceTemplate.RaceChosen != null && raceTemplate.GenderChosen != null)
+            if (race.Username != null && race.RaceChosen != null && race.GenderChosen != null)
             {
                 //Viser formen til brugeren
                 gameForm.Show();
