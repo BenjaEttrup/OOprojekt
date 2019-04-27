@@ -55,6 +55,8 @@ namespace OOprojekt
             {
                 //Vis en MessageBox der fortæller brugeren hvad der mangler
                 MessageBox.Show("You need to type a username!");
+                //Spring til Fail labelen
+                goto Fail;
             }
 
             //Prøv det her...
@@ -69,6 +71,8 @@ namespace OOprojekt
             {
                 //Vis en MessageBox der fortæller brugeren hvad der mangler
                 MessageBox.Show("You need to pick a race!");
+                //Spring til Fail labelen
+                goto Fail;
             }
 
             //Prøv det her...
@@ -83,6 +87,8 @@ namespace OOprojekt
             {
                 //Vis en MessageBox der fortæller brugeren hvad der mangler
                 MessageBox.Show("You need to pick a gender!");
+                //Spring til Fail labelen
+                goto Fail;
             }
 
             //Hvis alle felterne på formen er blevet fyldt ud...
@@ -91,6 +97,10 @@ namespace OOprojekt
                 //Viser formen til brugeren
                 gameForm.Show();
             }
+
+            //Fail labelen
+            Fail:;
+
 
         }
 

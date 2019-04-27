@@ -26,11 +26,7 @@ namespace OOprojekt
             form1 = refForm1;
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(race.Username);
-
-        }
+        
 
         //Når formen loader...
         private void GameForm_Load(object sender, EventArgs e)
@@ -42,5 +38,7 @@ namespace OOprojekt
             //Så jeg ikke skal referer over i den første for hvis jeg skal bruge race variablen
             race = form1.race;
         }
+
+        
     }
 }
