@@ -36,45 +36,47 @@
             this.btnUseItem = new System.Windows.Forms.Button();
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.lblInventoryTitel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitel
             // 
             this.lblTitel.AutoSize = true;
             this.lblTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitel.Location = new System.Drawing.Point(187, 9);
+            this.lblTitel.Location = new System.Drawing.Point(109, 9);
             this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(53, 25);
+            this.lblTitel.Size = new System.Drawing.Size(204, 25);
             this.lblTitel.TabIndex = 0;
-            this.lblTitel.Text = "Titel";
+            this.lblTitel.Text = "????????????????";
             // 
             // lblStats
             // 
             this.lblStats.AutoSize = true;
-            this.lblStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStats.Location = new System.Drawing.Point(165, 67);
+            this.lblStats.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStats.Location = new System.Drawing.Point(164, 293);
             this.lblStats.Name = "lblStats";
-            this.lblStats.Size = new System.Drawing.Size(49, 24);
+            this.lblStats.Size = new System.Drawing.Size(74, 23);
             this.lblStats.TabIndex = 1;
-            this.lblStats.Text = "Stats";
+            this.lblStats.Text = "STATS";
             // 
             // lblHealth
             // 
             this.lblHealth.AutoSize = true;
-            this.lblHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.Location = new System.Drawing.Point(166, 94);
+            this.lblHealth.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHealth.Location = new System.Drawing.Point(165, 316);
             this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(47, 16);
+            this.lblHealth.Size = new System.Drawing.Size(57, 18);
             this.lblHealth.TabIndex = 2;
             this.lblHealth.Text = "Health";
             // 
             // lblCP
             // 
             this.lblCP.AutoSize = true;
-            this.lblCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCP.Location = new System.Drawing.Point(166, 110);
+            this.lblCP.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCP.Location = new System.Drawing.Point(165, 334);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(23, 15);
+            this.lblCP.Size = new System.Drawing.Size(29, 18);
             this.lblCP.TabIndex = 3;
             this.lblCP.Text = "CP";
             // 
@@ -107,18 +109,27 @@
             // lblInventoryTitel
             // 
             this.lblInventoryTitel.AutoSize = true;
-            this.lblInventoryTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventoryTitel.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventoryTitel.Location = new System.Drawing.Point(299, 67);
             this.lblInventoryTitel.Name = "lblInventoryTitel";
-            this.lblInventoryTitel.Size = new System.Drawing.Size(86, 24);
+            this.lblInventoryTitel.Size = new System.Drawing.Size(85, 21);
             this.lblInventoryTitel.TabIndex = 7;
             this.lblInventoryTitel.Text = "Inventory";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(25, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(213, 184);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 359);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInventoryTitel);
             this.Controls.Add(this.btnNextTurn);
             this.Controls.Add(this.btnUseItem);
@@ -130,6 +141,7 @@
             this.Name = "GameForm";
             this.Text = "GameForm";
             this.Load += new System.EventHandler(this.GameForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +157,6 @@
         private System.Windows.Forms.Button btnUseItem;
         private System.Windows.Forms.Button btnNextTurn;
         private System.Windows.Forms.Label lblInventoryTitel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
