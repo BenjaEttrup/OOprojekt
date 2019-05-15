@@ -37,6 +37,8 @@
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.lblInventoryTitel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHealthNumber = new System.Windows.Forms.Label();
+            this.lblCPNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // 
             this.lblStats.AutoSize = true;
             this.lblStats.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStats.Location = new System.Drawing.Point(164, 293);
+            this.lblStats.Location = new System.Drawing.Point(119, 284);
             this.lblStats.Name = "lblStats";
             this.lblStats.Size = new System.Drawing.Size(74, 23);
             this.lblStats.TabIndex = 1;
@@ -64,21 +66,21 @@
             // 
             this.lblHealth.AutoSize = true;
             this.lblHealth.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.Location = new System.Drawing.Point(165, 316);
+            this.lblHealth.Location = new System.Drawing.Point(120, 307);
             this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(57, 18);
+            this.lblHealth.Size = new System.Drawing.Size(61, 18);
             this.lblHealth.TabIndex = 2;
-            this.lblHealth.Text = "Health";
+            this.lblHealth.Text = "Health:";
             // 
             // lblCP
             // 
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCP.Location = new System.Drawing.Point(165, 334);
+            this.lblCP.Location = new System.Drawing.Point(120, 325);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(29, 18);
+            this.lblCP.Size = new System.Drawing.Size(33, 18);
             this.lblCP.TabIndex = 3;
-            this.lblCP.Text = "CP";
+            this.lblCP.Text = "CP:";
             // 
             // lstInventory
             // 
@@ -124,11 +126,33 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // lblHealthNumber
+            // 
+            this.lblHealthNumber.AutoSize = true;
+            this.lblHealthNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHealthNumber.Location = new System.Drawing.Point(183, 307);
+            this.lblHealthNumber.Name = "lblHealthNumber";
+            this.lblHealthNumber.Size = new System.Drawing.Size(16, 18);
+            this.lblHealthNumber.TabIndex = 9;
+            this.lblHealthNumber.Text = "0";
+            // 
+            // lblCPNumber
+            // 
+            this.lblCPNumber.AutoSize = true;
+            this.lblCPNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPNumber.Location = new System.Drawing.Point(183, 325);
+            this.lblCPNumber.Name = "lblCPNumber";
+            this.lblCPNumber.Size = new System.Drawing.Size(16, 18);
+            this.lblCPNumber.TabIndex = 10;
+            this.lblCPNumber.Text = "0";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 359);
+            this.Controls.Add(this.lblCPNumber);
+            this.Controls.Add(this.lblHealthNumber);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInventoryTitel);
             this.Controls.Add(this.btnNextTurn);
@@ -158,5 +182,7 @@
         private System.Windows.Forms.Button btnNextTurn;
         private System.Windows.Forms.Label lblInventoryTitel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblHealthNumber;
+        private System.Windows.Forms.Label lblCPNumber;
     }
 }
