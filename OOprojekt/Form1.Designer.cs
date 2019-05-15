@@ -90,10 +90,6 @@
             this.lstRace.Font = new System.Drawing.Font("Adobe Garamond Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstRace.FormattingEnabled = true;
             this.lstRace.ItemHeight = 20;
-            this.lstRace.Items.AddRange(new object[] {
-            "Ork",
-            "Elf",
-            "Human"});
             this.lstRace.Location = new System.Drawing.Point(148, 210);
             this.lstRace.Name = "lstRace";
             this.lstRace.Size = new System.Drawing.Size(120, 64);
@@ -140,6 +136,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

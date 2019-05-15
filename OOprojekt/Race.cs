@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOprojekt
 {
-    class Race
+    public class Race
     {
 
         //====================
@@ -14,7 +14,7 @@ namespace OOprojekt
         //====================
         
         //Array til at opbevare de racer brugeren kan vælge mellem
-        private string[] racer;
+        public string[] racer;
         //Indeholder den valgte race
         private string currentRace;
 
