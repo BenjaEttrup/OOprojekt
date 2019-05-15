@@ -26,6 +26,12 @@ namespace OOprojekt
         //Indeholder det brugernavn brugeren har skrevet
         private string username;
 
+        //Det health man har i spillet
+        private int health;
+
+        //Det CP man har i spillet
+        private int CP;
+
         //=========================
         //  DEFAULT CONSTRUCTOR
         //=========================
@@ -43,6 +49,10 @@ namespace OOprojekt
             gender = new string[2];
             gender[0] = "Female";
             gender[1] = "Male";
+
+            //Sætter start værdierne til health og combat power
+            health = 100;
+            CP = 100;
 
         }
 
@@ -96,6 +106,20 @@ namespace OOprojekt
         {
             set { username = value; }
             get { return username; }
+        }
+
+        //Det er en propety der styrer health variablen så man kan tilføje et positivt eller negativt tal
+        public int HealthProp
+        {
+            set { health += value; }
+            get { return health; }
+        }
+
+        //Det er en propety der styrer CP variablen så man kan tilføje et positivt eller negativt tal
+        public int CPProp
+        {
+            set { CP += value; }
+            get { return CP; }
         }
 
     }

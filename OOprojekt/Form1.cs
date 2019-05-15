@@ -49,12 +49,14 @@ namespace OOprojekt
             {
                 //Sender brugernavnet, brugeren har valgt, til Race classen
                 race.Username = txtUsername.Text;
-                MessageBox.Show(race.Username);
+                //MessageBox.Show(race.Username);
             }
             else//Ellers
             {
                 //Vis en MessageBox der fortæller brugeren hvad der mangler
                 MessageBox.Show("You need to type a username!");
+                //Spring til Fail labelen
+                goto Fail;
             }
 
             //Prøv det her...
@@ -62,13 +64,15 @@ namespace OOprojekt
             {
                 //Sender racen, brugeren har valgt, til Race classen 
                 race.RaceNumberChosen = lstRace.SelectedIndex;
-                MessageBox.Show(race.RaceChosen);
+                //MessageBox.Show(race.RaceChosen);
             }
             //Hvis det ikke virker...
             catch 
             {
                 //Vis en MessageBox der fortæller brugeren hvad der mangler
                 MessageBox.Show("You need to pick a race!");
+                //Spring til Fail labelen
+                goto Fail;
             }
 
             //Prøv det her...
@@ -76,13 +80,15 @@ namespace OOprojekt
             {
                 //Sender kønnet, brugeren har valgt til classen
                 race.GenderNumberChosen = lstGender.SelectedIndex;
-                MessageBox.Show(race.GenderChosen);
+                //MessageBox.Show(race.GenderChosen);
             }
             //Hvis ikke det virker...
             catch
             {
                 //Vis en MessageBox der fortæller brugeren hvad der mangler
                 MessageBox.Show("You need to pick a gender!");
+                //Spring til Fail labelen
+                goto Fail;
             }
 
             //Hvis alle felterne på formen er blevet fyldt ud...
@@ -91,6 +97,10 @@ namespace OOprojekt
                 //Viser formen til brugeren
                 gameForm.Show();
             }
+
+            //Fail labelen
+            Fail:;
+
 
         }
 

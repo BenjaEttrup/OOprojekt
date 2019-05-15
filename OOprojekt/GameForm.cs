@@ -26,11 +26,7 @@ namespace OOprojekt
             form1 = refForm1;
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(race.Username);
-
-        }
+        
 
         //Når formen loader...
         private void GameForm_Load(object sender, EventArgs e)
@@ -41,6 +37,19 @@ namespace OOprojekt
             //Kopirer race vriablen fra form1 over i race variablen i denne form
             //Så jeg ikke skal referer over i den første for hvis jeg skal bruge race variablen
             race = form1.race;
+
+            //Kører metoden UpdateGUI
+            UpdateGUI();
+        }
+
+        //Laver en metode der hedder UpdateGUI
+        private void UpdateGUI()
+        {
+            //Sætter Health værdien fra race objektet til GUIens health
+            lblHealthNumber.Text = race.HealthProp.ToString();
+
+            //Sætter CP værdien fra race objektet til GUIens CP
+            lblCPNumber.Text = race.CPProp.ToString();
         }
     }
 }
