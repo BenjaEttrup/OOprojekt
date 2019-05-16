@@ -18,6 +18,12 @@ namespace OOprojekt
         //Laver en variable af typen Race
         Race race;
 
+        //Laver en variable af typen Items
+        Items items;
+
+        //Laver en liste til at holde variabler af typen Items
+        List<Items> itemList = new List<Items>();
+
         public GameForm(Form1 refForm1)//Laver en reference til den første form
         {
             InitializeComponent();
@@ -51,5 +57,67 @@ namespace OOprojekt
             //Sætter CP værdien fra race objektet til GUIens CP
             lblCPNumber.Text = race.CPProp.ToString();
         }
+
+        //Når knappen Next turn er trykket på...
+        private void btnNextTurn_Click(object sender, EventArgs e)
+        {
+            items = new Items();
+
+            items.ItemNameProp = "Sword";
+
+            itemList.Add(items);
+            lstInventory.Items.Add(items.ItemNameProp);
+        }
+
+        //Når knappen Use item er trykket på...
+        private void btnUseItem_Click(object sender, EventArgs e)
+        {
+            //Tjekker om listen er tom
+            if (lstInventory.Items.Count == 0)
+            {
+                //Hvis listen er tom så vis en MessageBox til brugeren
+                MessageBox.Show("You have no items");
+
+                //Gå til labelen NoItems
+                goto NoItems;
+            }
+
+            //Prøv...
+            try
+            {
+                //For hver item i itemListen...
+                foreach (Items item in itemList)
+                {
+                    //Hvis navnet på itemet er det samme som itemet i listBoxens navn...
+                    if (item.ItemNameProp == lstInventory.SelectedItem.ToString())
+                    {
+                        //Sæt Værdierne fra race objektet til item objektets værdier
+                        race.HealthProp = item.HealthEffectProp;
+                        race.CPProp = item.CPEffectProp;
+
+                        //Sletter det valgte/brugte item fra både itemListen og listBoxen
+                        itemList.Remove(item);
+                        lstInventory.Items.Remove(lstInventory.SelectedItem.ToString());
+
+                        //Bryder foreach loopet
+                        break;
+                    }
+                }
+            }
+            //Hvis ikke det virker...
+            catch
+            {
+                //Vis en MessageBox til brugeren
+                MessageBox.Show("Choose an item");
+                
+            }
+
+            //Kører metoden UpdateGUI så Health og CP bliver opdateret
+            UpdateGUI();
+
+            //Labelen NoItems
+            NoItems:;
+        }
+
     }
 }

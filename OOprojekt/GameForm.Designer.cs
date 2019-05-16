@@ -98,6 +98,7 @@
             this.btnUseItem.TabIndex = 5;
             this.btnUseItem.Text = "Use selected item";
             this.btnUseItem.UseVisualStyleBackColor = true;
+            this.btnUseItem.Click += new System.EventHandler(this.btnUseItem_Click);
             // 
             // btnNextTurn
             // 
@@ -107,6 +108,7 @@
             this.btnNextTurn.TabIndex = 6;
             this.btnNextTurn.Text = "Next turn";
             this.btnNextTurn.UseVisualStyleBackColor = true;
+            this.btnNextTurn.Click += new System.EventHandler(this.btnNextTurn_Click);
             // 
             // lblInventoryTitel
             // 
