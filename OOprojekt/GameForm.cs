@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace OOprojekt
 {
@@ -23,6 +24,12 @@ namespace OOprojekt
 
         //Laver en liste til at holde variabler af typen Items
         List<Items> itemList = new List<Items>();
+
+        //Laver en variable af typen Events
+        Events events;
+
+        //Laver et objekt som kan lave et tilfældigt tal
+        Random random = new Random();
 
         public GameForm(Form1 refForm1)//Laver en reference til den første form
         {
@@ -46,6 +53,13 @@ namespace OOprojekt
 
             //Kører metoden UpdateGUI
             UpdateGUI();
+
+            //Laver et objekt af Events
+            events = new Events();
+
+            //Sætter informationen fra den sidste form til de labels på Gameformen
+            lblName.Text = "Name: " + race.Username;
+            lblRace.Text = "Race:   " + race.RaceChosen;
         }
 
         //Laver en metode der hedder UpdateGUI
@@ -61,12 +75,26 @@ namespace OOprojekt
         //Når knappen Next turn er trykket på...
         private void btnNextTurn_Click(object sender, EventArgs e)
         {
+            //Bruger random objektet til at gemme et tilfældigt tal i variablen randomNumber
+            int randomNumber = random.Next(1, 3);
+
+            //Kører en metode kaldt eventChooser og giver den variablen randomNumber
+            //Det er til at vælge eventet der kommer til at ske
+            events.eventChooser(randomNumber);
+
+            //Laver et nyt Objekt af typen Items
             items = new Items();
 
-            items.ItemNameProp = "Sword";
+            //Ligger navnet på itemen man får af et event over til item objektet 
+            //så det kan blive tilføjet til inventory listen og item listen
+            items.ItemNameProp = events.ItemCollected;
 
+            //Adder itemet til både listBoxen på gameformen og listen itemList
             itemList.Add(items);
             lstInventory.Items.Add(items.ItemNameProp);
+
+            //Viser event beskrivelsen til brugeren
+            MessageBox.Show(events.EventDescription);
         }
 
         //Når knappen Use item er trykket på...
@@ -119,5 +147,6 @@ namespace OOprojekt
             NoItems:;
         }
 
+        
     }
 }

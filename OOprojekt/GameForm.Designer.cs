@@ -36,27 +36,29 @@
             this.btnUseItem = new System.Windows.Forms.Button();
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.lblInventoryTitel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbWalk = new System.Windows.Forms.PictureBox();
             this.lblHealthNumber = new System.Windows.Forms.Label();
             this.lblCPNumber = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblRace = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbWalk)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitel
             // 
             this.lblTitel.AutoSize = true;
             this.lblTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitel.Location = new System.Drawing.Point(109, 9);
+            this.lblTitel.Location = new System.Drawing.Point(118, 9);
             this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(204, 25);
+            this.lblTitel.Size = new System.Drawing.Size(180, 25);
             this.lblTitel.TabIndex = 0;
-            this.lblTitel.Text = "????????????????";
+            this.lblTitel.Text = "++++++++++++++";
             // 
             // lblStats
             // 
             this.lblStats.AutoSize = true;
             this.lblStats.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStats.Location = new System.Drawing.Point(119, 284);
+            this.lblStats.Location = new System.Drawing.Point(12, 282);
             this.lblStats.Name = "lblStats";
             this.lblStats.Size = new System.Drawing.Size(74, 23);
             this.lblStats.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             this.lblHealth.AutoSize = true;
             this.lblHealth.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.Location = new System.Drawing.Point(120, 307);
+            this.lblHealth.Location = new System.Drawing.Point(162, 307);
             this.lblHealth.Name = "lblHealth";
             this.lblHealth.Size = new System.Drawing.Size(61, 18);
             this.lblHealth.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCP.Location = new System.Drawing.Point(120, 325);
+            this.lblCP.Location = new System.Drawing.Point(162, 325);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(33, 18);
             this.lblCP.TabIndex = 3;
@@ -120,19 +122,20 @@
             this.lblInventoryTitel.TabIndex = 7;
             this.lblInventoryTitel.Text = "Inventory";
             // 
-            // pictureBox1
+            // ptbWalk
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 83);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 184);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.ptbWalk.Location = new System.Drawing.Point(43, 83);
+            this.ptbWalk.Name = "ptbWalk";
+            this.ptbWalk.Size = new System.Drawing.Size(156, 184);
+            this.ptbWalk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbWalk.TabIndex = 8;
+            this.ptbWalk.TabStop = false;
             // 
             // lblHealthNumber
             // 
             this.lblHealthNumber.AutoSize = true;
             this.lblHealthNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealthNumber.Location = new System.Drawing.Point(183, 307);
+            this.lblHealthNumber.Location = new System.Drawing.Point(225, 307);
             this.lblHealthNumber.Name = "lblHealthNumber";
             this.lblHealthNumber.Size = new System.Drawing.Size(16, 18);
             this.lblHealthNumber.TabIndex = 9;
@@ -142,20 +145,42 @@
             // 
             this.lblCPNumber.AutoSize = true;
             this.lblCPNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPNumber.Location = new System.Drawing.Point(183, 325);
+            this.lblCPNumber.Location = new System.Drawing.Point(225, 325);
             this.lblCPNumber.Name = "lblCPNumber";
             this.lblCPNumber.Size = new System.Drawing.Size(16, 18);
             this.lblCPNumber.TabIndex = 10;
             this.lblCPNumber.Text = "0";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(13, 307);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(53, 18);
+            this.lblName.TabIndex = 11;
+            this.lblName.Text = "Name:";
+            // 
+            // lblRace
+            // 
+            this.lblRace.AutoSize = true;
+            this.lblRace.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRace.Location = new System.Drawing.Point(12, 325);
+            this.lblRace.Name = "lblRace";
+            this.lblRace.Size = new System.Drawing.Size(46, 18);
+            this.lblRace.TabIndex = 12;
+            this.lblRace.Text = "Race:";
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 359);
+            this.Controls.Add(this.lblRace);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblCPNumber);
             this.Controls.Add(this.lblHealthNumber);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbWalk);
             this.Controls.Add(this.lblInventoryTitel);
             this.Controls.Add(this.btnNextTurn);
             this.Controls.Add(this.btnUseItem);
@@ -167,7 +192,7 @@
             this.Name = "GameForm";
             this.Text = "GameForm";
             this.Load += new System.EventHandler(this.GameForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbWalk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,8 +208,10 @@
         private System.Windows.Forms.Button btnUseItem;
         private System.Windows.Forms.Button btnNextTurn;
         private System.Windows.Forms.Label lblInventoryTitel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbWalk;
         private System.Windows.Forms.Label lblHealthNumber;
         private System.Windows.Forms.Label lblCPNumber;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblRace;
     }
 }
