@@ -11,15 +11,14 @@ namespace OOprojekt
         //====================
         //  CLASS VARIABLES
         //====================
-
-        //
-        private string eventName;
-
+        
         //Laver en string der skal indeholde en beskrivelse om eventet
         private string eventDescription;
 
         //Laver en string der skal indeholde navnet på det item man får
         private string itemCollected;
+
+        private bool isMonster;
 
         
         //=========================
@@ -35,12 +34,42 @@ namespace OOprojekt
                 case 1:
                     eventDescription = "You found an Apple!";
                     itemCollected = "Apple";
+                    isMonster = false;
 
                     break;
 
                 case 2:
                     eventDescription = "You found a Sword!";
                     itemCollected = "Sword";
+                    isMonster = false;
+
+                    break;
+
+                case 3:
+                    eventDescription = "You found a monster";
+                    itemCollected = "";
+                    isMonster = true;
+
+                    break;
+
+                case 4:
+                    eventDescription = "You found a monster";
+                    itemCollected = "";
+                    isMonster = true;
+
+                    break;
+
+                case 5:
+                    eventDescription = "You found a monster";
+                    itemCollected = "";
+                    isMonster = true;
+
+                    break;
+
+                case 6:
+                    eventDescription = "You found an Apple!";
+                    itemCollected = "Apple";
+                    isMonster = false;
 
                     break;
             }
@@ -52,10 +81,6 @@ namespace OOprojekt
         //==============================
 
         //Gør så man kan læse variablerne fra en anden form
-        public string EventName
-        {
-            get { return eventName; }
-        }
         public string EventDescription
         {
             get { return eventDescription; }
@@ -63,6 +88,12 @@ namespace OOprojekt
         public string ItemCollected
         {
             get { return itemCollected; }
+        }
+
+        public bool IsMonster
+        {
+            set { isMonster = value; }
+            get { return isMonster; }
         }
 
     }

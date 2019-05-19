@@ -135,7 +135,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTitle);
             this.Name = "Form1";
-            this.Text = "Create a caracter";
+            this.Text = "Create a Character";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

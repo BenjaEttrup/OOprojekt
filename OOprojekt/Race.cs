@@ -52,7 +52,7 @@ namespace OOprojekt
 
             //Sætter start værdierne til health og combat power
             health = 100;
-            CP = 100;
+            CP = 5;
 
         }
 
@@ -111,7 +111,7 @@ namespace OOprojekt
         //Det er en propety der styrer health variablen så man kan tilføje et positivt eller negativt tal
         public int HealthProp
         {
-            set { health += value; }
+            set { health = value; }
             get { return health; }
         }
 

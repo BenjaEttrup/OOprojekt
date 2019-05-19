@@ -48,10 +48,22 @@ namespace OOprojekt
                 //Dette er de forskellige Items
                 case "Apple":
                     healthEffect = 20;
+
                     break;
 
                 case "Sword":
-                    CPEffect = 20;
+                    CPEffect = 3;
+
+                    break;
+
+                case "Monster organs":
+                    healthEffect = 5;
+
+                    break;
+
+                case "Monster organs Medium":
+                    healthEffect = 15;
+
                     break;
                     
                 

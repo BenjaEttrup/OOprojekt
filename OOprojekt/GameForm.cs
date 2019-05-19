@@ -31,6 +31,22 @@ namespace OOprojekt
         //Laver et objekt som kan lave et tilfældigt tal
         Random random = new Random();
 
+        FightSystem fightSystem;
+
+        Monsters monsters;
+
+        public string monsterName;
+        public string monsterDescription;
+        public int monsterCP;
+        public int monsterHealth;
+        public int monsterLvl;
+
+        
+        public int playerHealth;
+        public int playerCP;
+
+        
+
         public GameForm(Form1 refForm1)//Laver en reference til den første form
         {
             InitializeComponent();
@@ -63,7 +79,7 @@ namespace OOprojekt
         }
 
         //Laver en metode der hedder UpdateGUI
-        private void UpdateGUI()
+        public void UpdateGUI()
         {
             //Sætter Health værdien fra race objektet til GUIens health
             lblHealthNumber.Text = race.HealthProp.ToString();
@@ -72,26 +88,86 @@ namespace OOprojekt
             lblCPNumber.Text = race.CPProp.ToString();
         }
 
+        public void UpdateAfterMonster()
+        {
+            race.HealthProp = playerHealth;
+            UpdateGUI();
+
+            if (fightSystem.monsterIsDead)
+            {
+                try
+                {
+                    //Laver et nyt Objekt af typen Items
+                    items = new Items();
+
+                    //Ligger navnet på itemen man får af et monster over til item objektet 
+                    //så det kan blive tilføjet til inventory listen og item listen
+                    items.ItemNameProp = monsters.ItemDrop;
+
+                    //Adder itemet til både listBoxen på gameformen og listen itemList
+                    itemList.Add(items);
+                    lstInventory.Items.Add(items.ItemNameProp);
+                }
+                catch
+                {
+                    MessageBox.Show("Der gik noget galt med monster item droppet!");
+
+                }
+            }
+            
+        }
+
         //Når knappen Next turn er trykket på...
         private void btnNextTurn_Click(object sender, EventArgs e)
         {
             //Bruger random objektet til at gemme et tilfældigt tal i variablen randomNumber
-            int randomNumber = random.Next(1, 3);
+            int randomNumber = random.Next(1, 7);
 
             //Kører en metode kaldt eventChooser og giver den variablen randomNumber
             //Det er til at vælge eventet der kommer til at ske
             events.eventChooser(randomNumber);
 
-            //Laver et nyt Objekt af typen Items
-            items = new Items();
+            if (events.IsMonster == true)
+            {
+                monsters = new Monsters();
 
-            //Ligger navnet på itemen man får af et event over til item objektet 
-            //så det kan blive tilføjet til inventory listen og item listen
-            items.ItemNameProp = events.ItemCollected;
+                if (race.CPProp <= 10)
+                {
+                    monsters.monsterChooserEasy();
+                }
+                else if (race.CPProp > 10)
+                {
+                    monsters.monsterChooserMedium();
+                }
+                
+                monsterName = monsters.MonsterName;
+                monsterDescription = monsters.MonsterDescription;
+                monsterCP = monsters.MonsterCP;
+                monsterHealth = monsters.MonsterHealth;
+                monsterLvl = monsters.MonsterLvl;
 
-            //Adder itemet til både listBoxen på gameformen og listen itemList
-            itemList.Add(items);
-            lstInventory.Items.Add(items.ItemNameProp);
+                playerHealth = race.HealthProp;
+                playerCP = race.CPProp;
+
+                fightSystem = new FightSystem(this, race);
+                fightSystem.Show();
+
+
+            }
+
+            if (events.ItemCollected != "")
+            {
+                //Laver et nyt Objekt af typen Items
+                items = new Items();
+
+                //Ligger navnet på itemen man får af et event over til item objektet 
+                //så det kan blive tilføjet til inventory listen og item listen
+                items.ItemNameProp = events.ItemCollected;
+
+                //Adder itemet til både listBoxen på gameformen og listen itemList
+                itemList.Add(items);
+                lstInventory.Items.Add(items.ItemNameProp);
+            }
 
             //Viser event beskrivelsen til brugeren
             MessageBox.Show(events.EventDescription);
@@ -120,7 +196,7 @@ namespace OOprojekt
                     if (item.ItemNameProp == lstInventory.SelectedItem.ToString())
                     {
                         //Sæt Værdierne fra race objektet til item objektets værdier
-                        race.HealthProp = item.HealthEffectProp;
+                        race.HealthProp += item.HealthEffectProp;
                         race.CPProp = item.CPEffectProp;
 
                         //Sletter det valgte/brugte item fra både itemListen og listBoxen
