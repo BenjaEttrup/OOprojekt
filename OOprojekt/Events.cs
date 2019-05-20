@@ -18,6 +18,7 @@ namespace OOprojekt
         //Laver en string der skal indeholde navnet på det item man får
         private string itemCollected;
 
+        //Laver en Bool variabel til at tjekke om man møder et monster i eventet
         private bool isMonster;
 
         
@@ -31,6 +32,7 @@ namespace OOprojekt
             //En switch der matcher det tilfældige tal med et event
             switch (randomNumber)
             {
+                //De forskellige events
                 case 1:
                     eventDescription = "You found an Apple!";
                     itemCollected = "Apple";
@@ -89,7 +91,6 @@ namespace OOprojekt
         {
             get { return itemCollected; }
         }
-
         public bool IsMonster
         {
             set { isMonster = value; }

@@ -36,12 +36,10 @@
             this.btnUseItem = new System.Windows.Forms.Button();
             this.btnNextTurn = new System.Windows.Forms.Button();
             this.lblInventoryTitel = new System.Windows.Forms.Label();
-            this.ptbWalk = new System.Windows.Forms.PictureBox();
             this.lblHealthNumber = new System.Windows.Forms.Label();
             this.lblCPNumber = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblRace = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbWalk)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitel
@@ -122,15 +120,6 @@
             this.lblInventoryTitel.TabIndex = 7;
             this.lblInventoryTitel.Text = "Inventory";
             // 
-            // ptbWalk
-            // 
-            this.ptbWalk.Location = new System.Drawing.Point(43, 83);
-            this.ptbWalk.Name = "ptbWalk";
-            this.ptbWalk.Size = new System.Drawing.Size(156, 184);
-            this.ptbWalk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbWalk.TabIndex = 8;
-            this.ptbWalk.TabStop = false;
-            // 
             // lblHealthNumber
             // 
             this.lblHealthNumber.AutoSize = true;
@@ -180,7 +169,6 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblCPNumber);
             this.Controls.Add(this.lblHealthNumber);
-            this.Controls.Add(this.ptbWalk);
             this.Controls.Add(this.lblInventoryTitel);
             this.Controls.Add(this.btnNextTurn);
             this.Controls.Add(this.btnUseItem);
@@ -192,7 +180,6 @@
             this.Name = "GameForm";
             this.Text = "Monster Hunt";
             this.Load += new System.EventHandler(this.GameForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbWalk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +195,6 @@
         private System.Windows.Forms.Button btnUseItem;
         private System.Windows.Forms.Button btnNextTurn;
         private System.Windows.Forms.Label lblInventoryTitel;
-        private System.Windows.Forms.PictureBox ptbWalk;
         private System.Windows.Forms.Label lblHealthNumber;
         private System.Windows.Forms.Label lblCPNumber;
         private System.Windows.Forms.Label lblName;

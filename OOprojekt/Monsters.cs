@@ -12,20 +12,20 @@ namespace OOprojekt
         //  CLASS VARIABLES
         //====================
 
+        //Variabler til at holde informationen om det valgte monster
         private string monsterName;
-
         private int monsterHealth;
-
         private string monsterDescription;
-
         private int monsterCP;
-
         private int monsterLvl;
 
+        //Laver et objekt der kan lave tilfældige tal
         Random random = new Random();
 
+        //Laver en variabel til at holde det tilfældige nummer
         private int randomNumber;
 
+        //Laver en variabel der indeholder navnet på det item monsteret dropper når det er dødt
         private string itemDrop;
 
         
@@ -35,8 +35,10 @@ namespace OOprojekt
         //  DEFAULT CONSTRUCTOR
         //=========================
 
+        //Det kode der bliver kørt når der bliver lavet et objekt af classen
         public Monsters()
         {
+            //Vælger et tilfældigt til mellem 1 og 2 og gemmer det i variablen randomNumber
             randomNumber = random.Next(1, 3);
         }
 
@@ -45,10 +47,13 @@ namespace OOprojekt
         //      METHODS
         //=========================
 
+        //En metode til at vælge et nemt monster
         public void monsterChooserEasy()
         {
+            //En switch der vælger et monster ud fra det tilfældige tal
             switch (randomNumber)
             {
+                //Dette er de forskellige lette monstre
                 case 1:
                     monsterName = "Monkeyman";
                     monsterHealth = 10;
@@ -73,10 +78,13 @@ namespace OOprojekt
             }
         }
 
+        //En metode til at vælge de svære monstre
         public void monsterChooserMedium()
         {
+            //En switch der vælger et monster ud fra det tilfældige tal
             switch (randomNumber)
             {
+                //Dette er de forskellige svære monstre
                 case 1:
                     monsterName = "Monkeyman M";
                     monsterHealth = 65;
@@ -104,6 +112,7 @@ namespace OOprojekt
         //  READ AND WRITE PROPERTY
         //==============================
 
+        //Dette er propeties til at andre classes kan læse værdierne
         public string MonsterName
         {
             get { return monsterName; }
