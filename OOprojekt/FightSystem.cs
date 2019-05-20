@@ -80,6 +80,8 @@ namespace OOprojekt
 
             if(gameForm.playerHealth <= 0)
             {
+                gameForm.UpdateAfterMonster();
+
                 MessageBox.Show("You died!");
                 
                 Application.Exit();

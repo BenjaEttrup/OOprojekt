@@ -78,22 +78,22 @@ namespace OOprojekt
             switch (randomNumber)
             {
                 case 1:
-                    monsterName = "Monkeyman Medium";
-                    monsterHealth = 50;
+                    monsterName = "Monkeyman M";
+                    monsterHealth = 65;
                     monsterDescription = "Monkeyman is a wierd experiment gone very wrong.";
-                    monsterCP = 15;
+                    monsterCP = 10;
                     monsterLvl = 5;
-                    itemDrop = "Monster organs Medium";
+                    itemDrop = "Monster organs M";
 
                     break;
 
                 case 2:
-                    monsterName = "Monkeyman2 Medium";
-                    monsterHealth = 65;
+                    monsterName = "Monkeyman2 M";
+                    monsterHealth = 50;
                     monsterDescription = "Monkeyman is a wierd experiment gone wrong.";
-                    monsterCP = 20;
+                    monsterCP = 15;
                     monsterLvl = 6;
-                    itemDrop = "Monster organs Medium";
+                    itemDrop = "Monster organs M";
 
                     break;
             }

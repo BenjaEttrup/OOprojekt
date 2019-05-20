@@ -47,10 +47,10 @@
             // lblTitel
             // 
             this.lblTitel.AutoSize = true;
-            this.lblTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitel.Location = new System.Drawing.Point(160, 9);
+            this.lblTitel.Font = new System.Drawing.Font("Charlemagne Std", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitel.Location = new System.Drawing.Point(106, 9);
             this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(141, 25);
+            this.lblTitel.Size = new System.Drawing.Size(208, 25);
             this.lblTitel.TabIndex = 0;
             this.lblTitel.Text = "Monster Hunt";
             // 

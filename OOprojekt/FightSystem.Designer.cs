@@ -45,7 +45,7 @@
             // btnRun
             // 
             this.btnRun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRun.Location = new System.Drawing.Point(17, 191);
+            this.btnRun.Location = new System.Drawing.Point(23, 213);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(113, 28);
             this.btnRun.TabIndex = 0;
@@ -56,7 +56,7 @@
             // btnFight
             // 
             this.btnFight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFight.Location = new System.Drawing.Point(175, 191);
+            this.btnFight.Location = new System.Drawing.Point(182, 213);
             this.btnFight.Name = "btnFight";
             this.btnFight.Size = new System.Drawing.Size(110, 28);
             this.btnFight.TabIndex = 1;
@@ -74,30 +74,30 @@
             // lblMonsterName
             // 
             this.lblMonsterName.AutoSize = true;
-            this.lblMonsterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonsterName.Location = new System.Drawing.Point(12, 63);
+            this.lblMonsterName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonsterName.Location = new System.Drawing.Point(19, 63);
             this.lblMonsterName.Name = "lblMonsterName";
-            this.lblMonsterName.Size = new System.Drawing.Size(55, 20);
+            this.lblMonsterName.Size = new System.Drawing.Size(48, 18);
             this.lblMonsterName.TabIndex = 4;
             this.lblMonsterName.Text = "Name:";
             // 
             // lblPlayerHealth
             // 
             this.lblPlayerHealth.AutoSize = true;
-            this.lblPlayerHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerHealth.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerHealth.Location = new System.Drawing.Point(13, 146);
             this.lblPlayerHealth.Name = "lblPlayerHealth";
-            this.lblPlayerHealth.Size = new System.Drawing.Size(56, 20);
+            this.lblPlayerHealth.Size = new System.Drawing.Size(53, 18);
             this.lblPlayerHealth.TabIndex = 6;
             this.lblPlayerHealth.Text = "Health";
             // 
             // lblPlayerCP
             // 
             this.lblPlayerCP.AutoSize = true;
-            this.lblPlayerCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerCP.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerCP.Location = new System.Drawing.Point(13, 166);
             this.lblPlayerCP.Name = "lblPlayerCP";
-            this.lblPlayerCP.Size = new System.Drawing.Size(30, 20);
+            this.lblPlayerCP.Size = new System.Drawing.Size(27, 18);
             this.lblPlayerCP.TabIndex = 7;
             this.lblPlayerCP.Text = "CP";
             // 
@@ -105,7 +105,7 @@
             // 
             this.lblMonsterCP.AutoSize = true;
             this.lblMonsterCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonsterCP.Location = new System.Drawing.Point(213, 14);
+            this.lblMonsterCP.Location = new System.Drawing.Point(258, 12);
             this.lblMonsterCP.Name = "lblMonsterCP";
             this.lblMonsterCP.Size = new System.Drawing.Size(34, 20);
             this.lblMonsterCP.TabIndex = 8;
@@ -122,27 +122,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Charlemagne Std", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
+            this.label1.Size = new System.Drawing.Size(216, 25);
             this.label1.TabIndex = 10;
             this.label1.Text = "Monsters Stats";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 24);
+            this.label2.Size = new System.Drawing.Size(93, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Your Stats";
             // 
             // lblMonsterLvl
             // 
             this.lblMonsterLvl.AutoSize = true;
-            this.lblMonsterLvl.Location = new System.Drawing.Point(175, 20);
+            this.lblMonsterLvl.Location = new System.Drawing.Point(224, 17);
             this.lblMonsterLvl.Name = "lblMonsterLvl";
             this.lblMonsterLvl.Size = new System.Drawing.Size(21, 13);
             this.lblMonsterLvl.TabIndex = 12;
@@ -152,10 +152,10 @@
             // 
             this.lblMonsterHealth.AutoSize = true;
             this.lblMonsterHealth.BackColor = System.Drawing.Color.Transparent;
-            this.lblMonsterHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonsterHealth.Location = new System.Drawing.Point(187, 63);
+            this.lblMonsterHealth.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonsterHealth.Location = new System.Drawing.Point(205, 63);
             this.lblMonsterHealth.Name = "lblMonsterHealth";
-            this.lblMonsterHealth.Size = new System.Drawing.Size(60, 20);
+            this.lblMonsterHealth.Size = new System.Drawing.Size(57, 18);
             this.lblMonsterHealth.TabIndex = 13;
             this.lblMonsterHealth.Text = "Health:";
             // 
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 242);
+            this.ClientSize = new System.Drawing.Size(319, 281);
             this.Controls.Add(this.lblMonsterHealth);
             this.Controls.Add(this.lblMonsterLvl);
             this.Controls.Add(this.label2);
