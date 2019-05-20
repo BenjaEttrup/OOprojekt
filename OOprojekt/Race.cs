@@ -108,7 +108,7 @@ namespace OOprojekt
             get { return username; }
         }
 
-        //Det er en propety der styrer health variablen så man kan tilføje et positivt eller negativt tal
+        //Det er en propety der styrer health variablen så man kan tilføje en værdi eller trække en værdi fra
         public int HealthProp
         {
             set { health = value; }

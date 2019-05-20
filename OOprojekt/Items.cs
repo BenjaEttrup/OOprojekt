@@ -13,6 +13,7 @@ namespace OOprojekt
         //  CLASS VARIABLES
         //====================
 
+        //Laver en variabel der indeholder itemets navn
         private string itemName;
 
         //Værdien i denne variabel styrer hvor meget der skal lægges til eller trækkes fra spillerens liv
@@ -61,8 +62,8 @@ namespace OOprojekt
 
                     break;
 
-                case "Monster organs Medium":
-                    healthEffect = 15;
+                case "Monster organs M":
+                    healthEffect = 10;
 
                     break;
                     

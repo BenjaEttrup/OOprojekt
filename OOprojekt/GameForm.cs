@@ -31,22 +31,24 @@ namespace OOprojekt
         //Laver et objekt som kan lave et tilfældigt tal
         Random random = new Random();
 
+        //Laver en variabel af typen fightSystem som kan indeholde en Form
         FightSystem fightSystem;
 
+        //Laver en variabel til at holde typen Monster
         Monsters monsters;
 
+        //Info om monsteret som formen fightSystem skal bruge
         public string monsterName;
         public string monsterDescription;
         public int monsterCP;
         public int monsterHealth;
         public int monsterLvl;
 
-        
+        //Info om Playeren som formen fightSystem skal bruge
         public int playerHealth;
         public int playerCP;
 
         
-
         public GameForm(Form1 refForm1)//Laver en reference til den første form
         {
             InitializeComponent();
@@ -88,13 +90,19 @@ namespace OOprojekt
             lblCPNumber.Text = race.CPProp.ToString();
         }
 
+        //Laver en metode der skal køre når FightSytem formen lukker til at opdatere GameFormen
         public void UpdateAfterMonster()
         {
+            //Gør playerens liv fra fightSystem formen til den samme som livet i race objektet
             race.HealthProp = playerHealth;
+
+            //Kører metoden UpdateGUI
             UpdateGUI();
 
+            //Hvis monsteret er dødt skal playeren have et item som monsteret dropper
             if (fightSystem.monsterIsDead)
             {
+                //Prøv...
                 try
                 {
                     //Laver et nyt Objekt af typen Items
@@ -108,6 +116,7 @@ namespace OOprojekt
                     itemList.Add(items);
                     lstInventory.Items.Add(items.ItemNameProp);
                 }
+                //Hvis der skete en fejl fortæl det til brugeren med en MessageBox
                 catch
                 {
                     MessageBox.Show("Der gik noget galt med monster item droppet!");
@@ -127,34 +136,43 @@ namespace OOprojekt
             //Det er til at vælge eventet der kommer til at ske
             events.eventChooser(randomNumber);
 
+            //Hvis eventet indeholder et monster...
             if (events.IsMonster == true)
             {
+                //Laver et nyt objekt af typen monster
                 monsters = new Monsters();
 
-                if (race.CPProp <= 10)
+                //Hvis playerens Combat Power er under 15 så vælg en af de svage monstre fra monster classen
+                if (race.CPProp <= 15)
                 {
                     monsters.monsterChooserEasy();
                 }
-                else if (race.CPProp > 10)
+                //Ellers hvis playeren CP er over 15 så vælg en af de lidt svære monstre
+                else if (race.CPProp > 15)
                 {
                     monsters.monsterChooserMedium();
                 }
-                
+
+                //Lægger informationen om monsteret fra monster classen over i variablerne i denne form 
+                //så FightSystem formen kan bruge dem
                 monsterName = monsters.MonsterName;
                 monsterDescription = monsters.MonsterDescription;
                 monsterCP = monsters.MonsterCP;
                 monsterHealth = monsters.MonsterHealth;
                 monsterLvl = monsters.MonsterLvl;
 
+                //Den gør det samme med playeren
                 playerHealth = race.HealthProp;
                 playerCP = race.CPProp;
 
+                //Laver Formen og viser den til brugeren
                 fightSystem = new FightSystem(this, race);
                 fightSystem.Show();
 
 
             }
 
+            //Hvis ikke itemCollectet variablen er tom...
             if (events.ItemCollected != "")
             {
                 //Laver et nyt Objekt af typen Items
